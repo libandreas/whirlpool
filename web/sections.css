@@ -1,0 +1,646 @@
+.product-install-note {
+	max-width: 250px;
+}
+
+.whirlpool-email-providers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin: 28px auto;
+}
+
+.whirlpool-email-providers .home-model-pill img {
+	object-fit: contain;
+	border-radius: 0;
+}
+
+.whirlpool-email-providers .fa-envelope {
+	font-size: 28px;
+	color: #5476a1;
+}
+
+.whirlpool-computer-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+	margin: 32px auto;
+	flex-wrap: wrap;
+}
+
+.whirlpool-computer-icons img {
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+}
+
+.whirlpool-computer-icons img:last-child {
+	width: 60px;
+	height: 60px;
+}
+
+.whirlpool-computer-icons .whirlpool-search-icon {
+	font-size: 48px;
+	line-height: 1;
+}
+
+.whirlpool-access-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	max-width: 140px;
+	font-size: 14px;
+	line-height: 1.3;
+	text-align: center;
+}
+
+.whirlpool-access-step b {
+	font-size: 32px;
+	font-family: Arial, sans-serif;
+	font-weight: 900;
+	line-height: 1;
+}
+
+.product-page .whirlpool-search-frame {
+	display: block;
+	width: 100%;
+	max-width: min(700px, calc((100dvh - 128px) * 1.6));
+	height: auto;
+	aspect-ratio: 8 / 5;
+	margin: 28px auto 0;
+	border: 0;
+	border-radius: 12px;
+}
+
+.whirlpool-scroll-pin {
+	position: sticky;
+	top: 96px;
+}
+
+.whirlpool-scroll-pin > * {
+	transform-origin: top center;
+}
+
+
+
+@media (max-width: 599px), (pointer: coarse), (prefers-reduced-motion: reduce) {
+	.whirlpool-scroll-pin {
+		position: static;
+	}
+}
+
+.whirlpool-google-window {
+	position: relative;
+	box-sizing: border-box;
+	max-width: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.whirlpool-google-window > .whirlpool-explorer-titlebar {
+	flex-shrink: 0;
+}
+
+.whirlpool-search-demo {
+	display: grid;
+	grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+	flex: 1;
+	min-height: 0;
+	gap: 8px;
+	padding: 10px;
+	color: #244766;
+	font-size: 13px;
+}
+
+.whirlpool-demo-actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	gap: 8px;
+}
+
+.whirlpool-demo-actions > span {
+	padding: 8px;
+	border: 1px solid #cccccc;
+	border-radius: 16px;
+	background: #eeeeee;
+	text-align: center;
+	color: #172b3b;
+}
+
+.whirlpool-demo-actions .whirlpool-demo-revoke {
+	border-color: #e6a03c;
+	background: #ffe4ac;
+}
+
+.whirlpool-demo-search {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 14px;
+	border: 1px solid #d0d0d0;
+	border-radius: 16px;
+	background: #f6f6f6;
+}
+
+.whirlpool-demo-query {
+	color: #71808c;
+	white-space: pre-wrap;
+}
+
+.whirlpool-demo-search.is-searching .whirlpool-demo-query {
+	color: #172b3b;
+}
+
+.whirlpool-demo-score {
+	position: relative;
+	isolation: isolate;
+	padding: 4px;
+	border-radius: 14px;
+	overflow: hidden;
+	background: #edf2f5;
+	text-align: center;
+	font-weight: 600;
+}
+
+.whirlpool-demo-score::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: var(--score-width, 80%);
+	z-index: -1;
+	background: #bde99e;
+}
+
+.whirlpool-demo-files {
+	grid-area: 4 / 1;
+	min-height: 0;
+	overflow-y: hidden;
+	overflow-anchor: none;
+	scroll-behavior: auto;
+	outline-offset: -2px;
+}
+
+.whirlpool-demo-brand {
+	grid-area: 4 / 1;
+	align-self: center;
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+	font-size: 22px;
+	font-weight: 600;
+	pointer-events: none;
+}
+
+.whirlpool-demo-brand[hidden] {
+	display: none;
+}
+
+.whirlpool-demo-brand > img {
+	width: 96px;
+	height: 96px;
+	object-fit: contain;
+}
+
+.whirlpool-demo-pointer {
+	position: absolute;
+	left: var(--score-pointer, 90%);
+	top: 10px;
+	color: #172b3b;
+	font-size: 18px;
+	filter: drop-shadow(1px 1px 0 #ffffff);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.whirlpool-demo-score.is-adjusting .whirlpool-demo-pointer {
+	opacity: 1;
+}
+
+.whirlpool-demo-folder {
+	padding: 4px 8px 8px;
+	font-weight: 600;
+	width: fit-content;
+	border: 1px solid transparent;
+	border-radius: 8px;
+}
+
+.whirlpool-demo-folder.is-dragging {
+	border-color: #95b8d1;
+	background: #edf5fc;
+	box-shadow: 0 6px 16px #24476626;
+}
+
+.whirlpool-demo-folder > i {
+	display: none;
+	margin-left: 8px;
+	color: #172b3b;
+}
+
+.whirlpool-demo-folder.is-dragging > i {
+	display: inline-block;
+}
+
+.whirlpool-demo-file {
+	margin-bottom: 6px;
+}
+
+.whirlpool-demo-folder,
+.whirlpool-demo-file,
+.whirlpool-demo-keyword {
+	transition: opacity 220ms, transform 220ms;
+}
+
+.whirlpool-demo-folder.is-pending,
+.whirlpool-demo-file.is-pending,
+.whirlpool-demo-keyword.is-pending {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.whirlpool-demo-folder,
+	.whirlpool-demo-file,
+	.whirlpool-demo-keyword {
+		transition: none;
+	}
+}
+
+.whirlpool-demo-filename {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 6px 10px;
+	border-radius: 10px;
+	background: #cde0ea;
+	line-height: 18px;
+}
+
+.whirlpool-demo-filename > span:first-child {
+	color: #8461bd;
+}
+
+.whirlpool-demo-filename > span:nth-child(2) {
+	flex: 1;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.whirlpool-demo-result {
+	margin: 12px 12px 20px 20px;
+	padding: 4px 0 4px 16px;
+	border-left: 1px solid #d4deea;
+}
+
+.whirlpool-demo-result > strong {
+	display: block;
+	margin-bottom: 16px;
+	color: #425167;
+}
+
+.whirlpool-demo-keywords {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.whirlpool-demo-keyword {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	border: 1px solid #d5dfed;
+	border-radius: 8px;
+	background: #f5f8fd;
+	color: #28517c;
+}
+
+.whirlpool-demo-keyword > small {
+	position: absolute;
+	top: -10px;
+	right: -5px;
+	min-width: 18px;
+	border-radius: 50%;
+	background: #28517c;
+	color: #ffffff;
+	text-align: center;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.whirlpool-demo-status {
+	padding: 6px;
+	border-radius: 12px;
+	background: #b9d9ee;
+	text-align: center;
+	font-weight: 600;
+}
+
+.whirlpool-demo-footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 7px;
+	background: #606065;
+	font-size: 16px;
+}
+
+@media (max-width: 599px), (pointer: coarse), (prefers-reduced-motion: reduce) {
+	.whirlpool-search-demo {
+		grid-template-rows: repeat(6, auto);
+	}
+	.whirlpool-demo-files {
+		overflow: visible;
+	}
+}
+
+.whirlpool-comparison .whirlpool-language-flags {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 8px;
+}
+
+.whirlpool-language-flags img {
+	object-fit: cover;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px #0000001a;
+}
+
+.whirlpool-comparison .whirlpool-foreign-content > th,
+.whirlpool-comparison .whirlpool-foreign-content > td {
+	border-bottom: 0;
+}
+
+.whirlpool-comparison .whirlpool-language-flags-row {
+	border-bottom: 0;
+}
+
+.whirlpool-comparison {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+	text-align: left;
+}
+
+.whirlpool-comparison .pricing-card {
+	padding: 20px;
+}
+
+.whirlpool-comparison h3 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 8px;
+	font-size: 25px;
+}
+
+.whirlpool-comparison-logo {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.whirlpool-comparison-pdf {
+	width: 30px;
+	font-size: 28px;
+	color: #d64545;
+	text-align: center;
+}
+
+.whirlpool-comparison .whirlpool-comparison-subtitle {
+	margin: 0 0 20px;
+	font-size: 14px;
+	color: #666666;
+}
+
+.whirlpool-comparison-featured {
+	background: linear-gradient(145deg, #edf8fa, #ffffff);
+	border-color: #a5cdd3;
+}
+
+.whirlpool-comparison table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.whirlpool-comparison th,
+.whirlpool-comparison td {
+	height: 58px;
+	box-sizing: border-box;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--border-soft);
+	vertical-align: middle;
+}
+
+.whirlpool-comparison tr:last-child > th,
+.whirlpool-comparison tr:last-child > td {
+	border-bottom: 0;
+}
+
+.whirlpool-comparison th {
+	width: 57%;
+	padding-right: 12px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.whirlpool-comparison td {
+	text-align: center;
+	font-size: 21px;
+}
+
+.whirlpool-comparison-featured td {
+	color: #245d67;
+}
+
+.whirlpool-comparison-limited {
+	display: inline-block;
+	padding: 5px 8px;
+	border: 1px solid #e5a1c8;
+	border-radius: 8px;
+	background: linear-gradient(110deg, #ffd8e8 0%, #e8d7ff 48%, #d8efff 100%);
+	color: #4d2d4f;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.whirlpool-comparison-limited img {
+	vertical-align: middle;
+	object-fit: contain;
+}
+
+.whirlpool-comparison td.whirlpool-comparison-supported {
+	background: #f0f8f9;
+	color: #39818c;
+}
+
+.whirlpool-comparison small {
+	display: block;
+	line-height: 1.25;
+	font-size: 12px;
+	color: #666666;
+}
+
+.whirlpool-comparison-caption {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+}
+
+.product-theme-page .whirlpool-comparison-note {
+	max-width: 850px;
+	margin: 18px auto 0;
+	font-size: 13px;
+	color: #666666;
+}
+
+@media (max-width: 900px) {
+	.whirlpool-comparison {
+		grid-template-columns: 1fr;
+	}
+}
+
+.whirlpool-experiences {
+	padding: 24px 0;
+}
+
+.whirlpool-experiences .whirlpool-experiences-note {
+	text-align: center;
+	font-size: 13px;
+	color: #737373;
+	margin: 0 0 24px;
+}
+
+.whirlpool-experiences-window {
+	overflow: hidden;
+	mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+}
+
+.whirlpool-experiences-track {
+	display: flex;
+	width: max-content;
+	animation: whirlpool-experiences-scroll 55s linear infinite;
+}
+
+.whirlpool-experiences-group {
+	display: flex;
+	gap: 18px;
+	padding: 8px 18px 12px 0;
+}
+
+.whirlpool-experience-card {
+	box-sizing: border-box;
+	width: 320px;
+	padding: 22px 24px;
+	border: 1px solid #dce9ec;
+	border-radius: 22px;
+	background: linear-gradient(145deg, #f0f8fa, #ffffff 75%);
+}
+
+.whirlpool-experience-quote {
+	display: block;
+	height: 38px;
+	font: 64px/1 Georgia, serif;
+	color: #74aab4;
+}
+
+.whirlpool-experience-card h3 {
+	font-size: 19px;
+	font-weight: 600;
+	margin: 16px 0 12px;
+	color: #245d67;
+}
+
+.whirlpool-experience-card p {
+	font-size: 18px;
+	line-height: 1.6 !important;
+	margin: 0;
+}
+
+@keyframes whirlpool-experiences-scroll {
+	to { transform: translateX(-50%); }
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+	.whirlpool-experiences-window {
+		mask-image: none;
+		-webkit-mask-image: none;
+	}
+	.whirlpool-experiences-track {
+		display: block;
+		width: 100%;
+		animation: none;
+	}
+	.whirlpool-experiences-group {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 0;
+	}
+	.whirlpool-experiences-group[aria-hidden="true"] {
+		display: none;
+	}
+	.whirlpool-experience-card {
+		width: 100%;
+	}
+}
+
+
+.whirlpool-search-sections {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	padding: 36px 0;
+}
+
+.whirlpool-search-sections > :not(.whirlpool-vortex) {
+	position: relative;
+	z-index: 1;
+}
+
+.whirlpool-search-sections .whirlpool-folder-summary {
+	max-width: 860px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.whirlpool-search-sections .whirlpool-vortex {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	mask-image: linear-gradient(transparent, #000 12%, #000 85%, transparent);
+	-webkit-mask-image: linear-gradient(transparent, #000 12%, #000 85%, transparent);
+}
+
+.whirlpool-search-sections .whirlpool-vortex::before {
+	content: "";
+	position: absolute;
+	width: max(100%, 760px);
+	aspect-ratio: 1;
+	left: 50%;
+	top: 50%;
+	background: url('vortex-water.svg') center / contain no-repeat;
+	opacity: 0.22;
+	transform: translate(-50%, -50%) rotate(var(--vortex-angle, 0deg));
+	will-change: transform;
+}
+
+.whirlpool-search-sections .home-model-pill .whirlpool-file-icon {
+	width: 34px;
+	height: 34px;
+	object-fit: contain;
+	border-radius: 0;
+}

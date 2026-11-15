@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whirlpool customer search demo</title>
+	<link rel="stylesheet" href="search-frames.css?v=20261110-sidebar-left">
+	<script src="search-frames.js?v=20261110-drag-row-1" defer></script>
+</head>
+<body>
+	<main class="demo" data-demo="customers" role="img" aria-label="Animated Whirlpool demo: find a company across customer records and scanned invoices, then highlight its name in each document.">
+		<div class="workspace">
+			<section class="viewer" hidden>
+				<div class="document" hidden>
+					<div class="document-toolbar"><span>📄 Customer Record.pdf</span><span class="page-number">1 / 2</span><span>−　100%　＋</span></div>
+					<div class="document-scroll">
+						<article class="paper">
+							<h1>CUSTOMER RECORD</h1>
+							<div class="policy-meta"><span>Account CR-2048</span><span>October 12, 2026</span></div>
+							<section><h2>1. Account overview</h2><p>This record brings together the customer's contact information, billing details and service history.</p><p>Use the account reference when matching invoices, receipts and agreements.</p></section>
+							<section><h2>2. Registered company</h2><p>Company: <mark id="match-customer">Asterion Marine Ltd</mark></p><p>Customer number: <strong>2048</strong><br>Office: 24 Harbour Street, Piraeus<br>Contact: accounts@asterion.example</p></section>
+							<section><h2>3. Billing information</h2><p>Invoice reference: <strong>INV-2026-0142</strong><br>Payment terms: 30 days<br>Billing currency: EUR</p></section>
+							<section><h2>4. Related documents</h2><p>Service Agreement.pdf<br>Payment Receipt.pdf<br>Invoice-0142-scan.pdf</p></section>
+							<section><h2>5. Account notes</h2><p>Match the registered company name and customer number before processing a payment.</p></section>
+						</article>
+					</div>
+				</div>
+				<div class="document" hidden>
+					<div class="document-toolbar"><span>📄 Invoice-0142-scan.pdf</span><span class="page-number">1 / 1 · OCR</span><span>−　100%　＋</span></div>
+					<div class="document-scroll scan-scroll">
+						<div class="scanned-invoice">
+							<svg viewBox="0 0 620 880" role="img" aria-label="Scanned invoice addressed to Asterion Marine Ltd, customer 2048, total 1488 euros">
+								<defs>
+									<filter id="scan-paper"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="8"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".11"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+									<filter id="scan-ink"><feGaussianBlur stdDeviation=".22"/></filter>
+									<linearGradient id="scan-shade"><stop stop-color="#c5c4be"/><stop offset=".055" stop-color="#f4f3eb"/><stop offset=".94" stop-color="#eeede5"/><stop offset="1" stop-color="#d3d2ca"/></linearGradient>
+								</defs>
+								<rect width="620" height="880" fill="url(#scan-shade)" filter="url(#scan-paper)"/>
+								<g fill="#373737" font-family="Arial, sans-serif" filter="url(#scan-ink)">
+									<text x="48" y="68" font-size="19" font-weight="bold">HARBOUR SUPPLIES</text>
+									<text x="48" y="94" font-size="11">Marine equipment &amp; maintenance</text>
+									<text x="48" y="120" font-size="11">18 Dock Road · Piraeus</text>
+									<text x="404" y="70" font-size="24" font-weight="bold">INVOICE</text>
+									<text x="407" y="99" font-size="12">INV-2026-0142</text>
+									<path d="M46 150H574" stroke="#747474"/>
+									<text x="48" y="184" font-size="12">Invoice date: 12/10/2026</text>
+									<text x="390" y="184" font-size="12">Customer no. 2048</text>
+									<text x="48" y="236" font-size="12" font-weight="bold">BILL TO</text>
+								</g>
+								<g id="match-customer-scan" class="scan-hit">
+									<rect x="44" y="254" width="205" height="27" rx="2"/>
+									<text x="49" y="274" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Asterion Marine Ltd</text>
+								</g>
+								<g fill="#373737" font-family="Arial, sans-serif" filter="url(#scan-ink)">
+									<text x="48" y="310" font-size="14">24 Harbour Street, Piraeus</text>
+									<text x="48" y="338" font-size="13">accounts@asterion.example</text>
+									<rect x="46" y="382" width="528" height="38" fill="#d9d8d1"/>
+									<g font-size="13" font-weight="bold"><text x="57" y="407">Description</text><text x="359" y="407">Qty</text><text x="449" y="407">Amount</text></g>
+									<g font-size="13">
+										<text x="57" y="458">Marine safety equipment</text><text x="370" y="458">2</text><text x="462" y="458">€840.00</text>
+										<text x="57" y="512">Maintenance supplies</text><text x="370" y="512">1</text><text x="462" y="512">€360.00</text>
+									</g>
+									<path d="M46 478H574M46 535H574M46 420V535M574 420V535" fill="none" stroke="#99988f"/>
+									<text x="350" y="578" font-size="13">Subtotal</text><text x="461" y="578" font-size="13">€1,200.00</text>
+									<text x="350" y="613" font-size="13">VAT 24%</text><text x="473" y="613" font-size="13">€288.00</text>
+									<path d="M340 635H574" stroke="#747474"/>
+									<text x="350" y="674" font-size="18" font-weight="bold">TOTAL</text><text x="445" y="674" font-size="18" font-weight="bold">€1,488.00</text>
+									<text x="48" y="727" font-size="12">Payment terms: 30 days</text>
+									<text x="48" y="754" font-size="12">Please quote invoice INV-2026-0142.</text>
+									<text x="48" y="834" font-size="11" fill="#75756e">SAMPLE INVOICE · SCANNED COPY</text>
+								</g>
+								<g transform="translate(447 772) rotate(-9)" fill="none" stroke="#77786f" opacity=".5"><rect x="-54" y="-22" width="109" height="40" rx="2"/><text x="-38" y="4" fill="#77786f" stroke="none" font-family="Arial" font-size="19">RECEIVED</text></g>
+								<path d="M8 20 11 843M607 30 605 851" stroke="#888a8033" stroke-width="3"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<aside class="sidebar">
+				<header class="sidebar-heading"><img src="favicon-3.webp" alt=""><strong>Whirlpool Search</strong><span>⌁　×</span></header>
+				<div class="actions"><span>📎 Add Files</span><span id="access-folder">📁 Access Folder</span></div>
+				<div class="search"><span class="search-icon">🔍</span><span class="query">Search documents</span><span id="search-button">➜</span></div>
+				<div class="score" hidden>Similarity score <strong>0.82</strong></div>
+				<div class="welcome"><img src="favicon-3.webp" alt=""><h2>Find names and numbers across your files.</h2></div>
+				<div class="collection" hidden><div class="folder-label"><span>📁 Customer records</span><span class="revoke">Revoke</span></div><div class="file-list"></div></div>
+				<div class="status">Choose a folder to begin</div>
+			</aside>
+		</div>
+		<div class="folder-dialog" hidden>
+			<header><span>📁 Select Folder</span><span>×</span></header>
+			<div class="folder-navigation">
+				<div class="folder-navigation-buttons" aria-hidden="true">
+					<span><svg viewBox="0 0 20 20"><path d="M16 10H4m6-6-6 6 6 6"/></svg></span>
+					<span class="is-disabled"><svg viewBox="0 0 20 20"><path d="M4 10h12m-6-6 6 6-6 6"/></svg></span>
+					<span class="folder-history"><svg viewBox="0 0 20 20"><path d="m6 8 4 4 4-4"/></svg></span>
+					<span><svg viewBox="0 0 20 20"><path d="M10 16V4m-6 6 6-6 6 6"/></svg></span>
+				</div>
+				<div class="folder-path"><svg class="folder-location-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="3" width="16" height="11" rx="1"/><path d="M10 14v3m-4 0h8"/></svg><span>This PC</span><svg class="folder-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m8 6 4 4-4 4"/></svg><span>Desktop</span><svg class="folder-refresh" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 7a6 6 0 1 0 0 6M16 3v4h-4"/></svg></div>
+				<div class="folder-search">Search Desktop <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg></div>
+			</div>
+			<div class="folder-toolbar"><span>Organize ⌄</span><span>New folder</span><span class="folder-view">☷　⌄　 ▣</span></div>
+			<div class="folder-body">
+				<aside><span>⌂　Home</span><span>☁　OneDrive</span><strong>🖥️　Desktop</strong><span>↓　Downloads</span><span>📄　Documents</span><span>▧　Pictures</span><span>♫　Music</span><span>▷　Videos</span><span class="folder-this-pc">⌄　This PC</span><span>　▣　Windows (C:)</span></aside>
+				<div class="folder-details"><div class="folder-columns"><span>Name</span><span>Date modified</span><span>Type</span></div><div id="chosen-folder"><span>📁 Customer records</span><span>12/10/2026 09:42</span><span>File folder</span></div><div class="other-folder"><span>📁 Projects</span><span>09/10/2026 16:30</span><span>File folder</span></div><div class="other-folder"><span>📁 Work</span><span>07/10/2026 11:08</span><span>File folder</span></div></div>
+			</div>
+			<footer><div class="folder-selection"><span>Folder:</span><span class="folder-name"></span></div><div class="folder-dialog-buttons"><span id="select-folder">Select Folder</span><span>Cancel</span></div></footer>
+		</div>
+		<svg class="cursor" viewBox="0 0 24 28" fill="#fff" stroke="#35465d" stroke-width="1.5" aria-hidden="true"><path d="M3 2v21l6-6 5 9 4-2-5-9h8Z"/></svg>
+	</main>
+</body>
+</html>
