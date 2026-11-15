@@ -95,3 +95,9 @@ This repository contains Whirlpool's public website and demonstrations. The appl
 ## Website
 
 - [Whirlpool website](https://libandreas.github.io/whirlpool/)
+
+## Website languages
+
+- `index.html`: English page.
+- `index-el.html`: separate, hand-written Greek page.
+- `web/`: supporting styles, scripts and assets.
