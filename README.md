@@ -73,7 +73,7 @@ Support depends on the file format and its contents. Databases are not currently
 
 Document parsing, OCR, and search run on your device. Your selected documents and search queries are not uploaded to our servers for these operations.
 
-OCR language files and search models may need to be downloaded before use. License checks, product notices, and usage statistics can involve external connections. See the [privacy policy](https://libandreas.github.io/whirlpool/web/privacy-policy-whirlpool.html) for details.
+OCR language files and search models may need to be downloaded before use. License checks, product notices, and usage statistics can involve external connections.
 
 ## Demonstrations
 
@@ -89,10 +89,9 @@ These demonstrations illustrate the application's workflow. To search your own d
 This repository contains Whirlpool's public website and demonstrations. The application source code, document-processing workers, OCR resources, search models, and private configuration are not included.
 
 - `index.html`: the main product page.
-- `web/`: stylesheets, JavaScript, images, English and Greek demonstrations, and the privacy policy.
+- `web/`: stylesheets, JavaScript, images, English and Greek demonstrations.
 - `README.md`: project overview.
 
-## Website and privacy
+## Website
 
 - [Whirlpool website](https://libandreas.github.io/whirlpool/)
-- [Privacy policy](https://libandreas.github.io/whirlpool/web/privacy-policy-whirlpool.html)
