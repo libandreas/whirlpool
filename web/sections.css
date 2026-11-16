@@ -658,7 +658,5 @@
 .leafpad-languages .home-models-track{gap:0;animation-duration:40s}
 .leafpad-languages .language-group{display:flex;align-items:center;gap:1rem;padding-right:1rem;flex-shrink:0}
 .leafpad-languages .home-model-pill img{width:32px;height:24px;object-fit:contain;border-radius:3px}
-.leafpad-languages .home-models-marquee:hover .home-models-track,.leafpad-languages .home-models-marquee:focus-within .home-models-track,.leafpad-languages.is-paused .home-models-track{animation-play-state:paused}
-.leafpad-languages .language-pause{display:block;margin:1rem auto 0;padding:.45rem .85rem;border:1px solid var(--border-soft);border-radius:7px;background:#fff;color:var(--text-secondary);font:inherit;font-size:.85rem;cursor:pointer}
-.leafpad-languages .language-pause:focus-visible,.leafpad-languages .home-models-marquee:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media(prefers-reduced-motion:reduce){.leafpad-languages .home-models-marquee{overflow-x:auto;mask-image:none}.leafpad-languages .home-models-track{animation:none}.leafpad-languages .language-group[aria-hidden]{display:none}.leafpad-languages .language-pause{display:none}}
+.leafpad-languages .home-models-marquee:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.leafpad-languages .home-models-marquee{overflow-x:auto;mask-image:none}.leafpad-languages .home-models-track{animation:none}.leafpad-languages .language-group[aria-hidden]{display:none}}
