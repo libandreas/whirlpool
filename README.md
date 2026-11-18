@@ -1,28 +1,20 @@
 ﻿# Find Similar Words in Your Files / Whirlpool File Search
 
-Whirlpool File Search is a desktop app that finds exact matches, similar spellings and related terms in the files and folders you select. For example, you can find a customer’s name across scanned invoices.
+Search for names, numbers, similar words and related terms across your files and folders. All offline, no uploads.
 
-The search combines exact matches, similar spellings, and related terms. You can find a document even when you do not remember its filename or the exact wording used inside it.
-
-[Website and demonstrations](https://libandreas.github.io/whirlpool/)
-
-## Purpose of the project
-
-Finding a document often means opening files one by one or remembering exactly where something was saved. A filename search cannot tell you which invoice contains a company name or which scanned page mentions a particular reference number.
-
-Whirlpool brings the contents of your selected files into one searchable collection. It reads the documents, recognizes text in images when OCR is enabled, and lets you search across them together.
+Find exact matches, typos and related concepts in PDFs, office documents and scanned images without opening files one by one. Everything runs locally on your computer.
 
 ## Main features
 
-- Select individual files or entire folders and search their contents together.
-- Search for names, numbers, words, and phrases across documents.
-- Find exact matches, spelling variations, and words with similar written forms.
-- Find related terms using local FastText word vectors.
-- Read text in scanned PDFs and images with Tesseract OCR.
-- Adjust the similarity threshold to narrow or broaden the results.
-- Open matching documents and highlight the words found on the page.
-- Keep adding files and folders while background processing continues.
-- Save the working session and search index locally on your computer.
+* Select individual files or entire folders and search their contents together.
+* Search for names, numbers, words, and phrases across documents.
+* Find exact matches, spelling variations, and words with similar written forms.
+* Find related terms using local FastText word vectors.
+* Read text in scanned PDFs and images with Tesseract OCR.
+* Adjust the similarity threshold to narrow or broaden the results.
+* Open matching documents and highlight the words found on the page.
+* Keep adding files and folders while background processing continues.
+* Save the working session and search index locally on your computer.
 
 ## How it works
 
@@ -33,6 +25,18 @@ Whirlpool brings the contents of your selected files into one searchable collect
 5. Review the matching files and pages, then open a result to see the matching words in context.
 
 You choose which files and folders Whirlpool can access. Selecting a folder does not upload its contents to a processing server.
+
+## Search Customer Records and Invoices
+
+Find customer names, company names, invoice numbers, and payment references across contracts, receipts, and spreadsheets. Whirlpool searches both digital text and scanned paper invoices, highlighting the exact location of the match on the document page.
+
+## Search Email Attachments
+
+Connect Outlook or Gmail to search attachments across all your accounts alongside your local files. Whirlpool retrieves attachments through an authenticated connection and processes them entirely on your computer, keeping all your communications private.
+
+## Locate Files in File Explorer
+
+Once you find what you need, jump straight to the source. Whirlpool lets you open matching files directly or reveal their exact location in Windows File Explorer with a single click. You can also drag found images directly into an email, CMS, or upload field.
 
 ## Exact matches, similar spellings, and related words
 
@@ -49,55 +53,24 @@ Spelling similarity and semantic similarity serve different purposes. Two words 
 
 ### FastText
 
-FastText represents words as numerical vectors. Whirlpool uses these vectors locally to compare terms and find related words beyond an exact text match.
-
-This is useful when a document uses different wording from the search query. The matches depend on the language model and the similarity threshold; related terms are not guaranteed to be interchangeable synonyms.
+FastText represents words as numerical vectors. Whirlpool uses these vectors locally to compare terms and find related words beyond an exact text match. This is useful when a document uses different wording from the search query.
 
 ### Tesseract OCR
 
 Scanned documents and photographs often contain visible text without a selectable text layer. Whirlpool uses Tesseract OCR to recognize that text so it can be included in the search index.
 
-Select the appropriate OCR language for your documents. Recognition quality depends on the image quality, page orientation, language, and legibility of the text. After changing processing settings, use **Refresh Indexing** to process the saved documents again.
-
-### PDF.js
-
-PDF.js reads PDF documents and extracts their text and images. Whirlpool uses the extracted content for indexing and displays matching passages in its document viewer.
+Select the appropriate OCR language for your documents. Recognition quality depends on image quality, page orientation, language, and legibility of the text.
 
 ## Supported document types
 
 Whirlpool supports PDFs, images, Word documents, Excel spreadsheets, PowerPoint presentations, text files, and log files. Scanned documents and technical drawings can be searched through OCR when they contain recognizable text.
 
-Support depends on the file format and its contents. Databases are not currently supported.
-
 ## Local processing
 
-Document parsing, OCR, and search run on your device. Your selected documents and search queries are not uploaded to our servers for these operations.
+Document parsing, OCR, and search run completely on your device. Your files and search queries stay private and never leave your computer.
 
-OCR language files and search models may need to be downloaded before use. License checks, product notices, and usage statistics can involve external connections.
-
-## Demonstrations
-
-The website includes two animated demonstrations:
-
-- Searching documents and highlighting matching words in a document.
-- Finding a customer or company across customer records and scanned invoices.
-
-These demonstrations illustrate the application's workflow. To search your own documents, use the Whirlpool application.
-
-## About this repository
-
-This repository contains Whirlpool's public website and demonstrations. The application source code, document-processing workers, OCR resources, search models, and private configuration are not included.
-
-- `index.html`: the main product page.
-- `web/`: stylesheets, JavaScript, images, English and Greek demonstrations.
-- `README.md`: project overview.
+## Bug Reports and Issues
+https://github.com/libandreas/whirlpool/issues
 
 ## Website
-
-- [Whirlpool File Search website](https://libandreas.github.io/whirlpool/)
-
-## Website languages
-
-- `index.html`: English page.
-- `index-el.html`: separate, hand-written Greek page.
-- `web/`: supporting styles, scripts and assets.
+https://libandreas.github.io/whirlpool/
