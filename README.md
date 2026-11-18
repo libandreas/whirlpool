@@ -1,6 +1,6 @@
-﻿# Whirlpool: Search Inside Your Files
+﻿# Find Similar Words in Your Files / Whirlpool File Search
 
-Whirlpool searches the contents of documents and folders on your computer. Select the files or folders you want to include, enter the words you remember, and find matching passages across your collection, including text inside scanned PDFs and images.
+Whirlpool File Search is a desktop app that finds exact matches, similar spellings and related terms in the files and folders you select. For example, you can find a customer’s name across scanned invoices.
 
 The search combines exact matches, similar spellings, and related terms. You can find a document even when you do not remember its filename or the exact wording used inside it.
 
@@ -22,7 +22,7 @@ Whirlpool brings the contents of your selected files into one searchable collect
 - Adjust the similarity threshold to narrow or broaden the results.
 - Open matching documents and highlight the words found on the page.
 - Keep adding files and folders while background processing continues.
-- Save the working session and search index in local browser storage.
+- Save the working session and search index locally on your computer.
 
 ## How it works
 
@@ -32,7 +32,7 @@ Whirlpool brings the contents of your selected files into one searchable collect
 4. Enter a word or phrase and adjust the similarity threshold as needed.
 5. Review the matching files and pages, then open a result to see the matching words in context.
 
-You choose which files the browser can access. Selecting a folder does not upload its contents to a processing server.
+You choose which files and folders Whirlpool can access. Selecting a folder does not upload its contents to a processing server.
 
 ## Exact matches, similar spellings, and related words
 
@@ -94,7 +94,7 @@ This repository contains Whirlpool's public website and demonstrations. The appl
 
 ## Website
 
-- [Whirlpool website](https://libandreas.github.io/whirlpool/)
+- [Whirlpool File Search website](https://libandreas.github.io/whirlpool/)
 
 ## Website languages
 
