@@ -1,4 +1,4 @@
-﻿# Find Similar Words in Your Files / Whirlpool File Search
+﻿# Find Similar Words in Your Files / Whirlpool Search
 
 Search for names, numbers, similar words and related terms across your files and folders. All offline, no uploads.
 
